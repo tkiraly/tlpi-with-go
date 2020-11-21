@@ -1,3 +1,375 @@
 # The Linux Programming Interface With Go
 
 Examples from TLPI rewritten in a C like but more modern language called Go.
+
+## Not implemented in go
+
+- ~~progconc (Chapter 3)~~
+- fileio (Chapter 4-5)
+  - atomic_append
+  - bad_exclusive_open
+  - copy
+  - large_file
+  - multi_descriptors
+  - seek_io
+  - t_readv
+  - t_truncate
+- proc (Chapter 6)
+  - bad_longjmp
+  - display_env
+  - longjmp
+  - mem_segments
+  - modify_env
+  - necho
+  - setenv
+  - setjmp_vars
+  - t_getenv
+- memalloc (Chapter 7)
+  - free_and_sbrk
+- users_groups (Chapter 8)
+  - check_password
+  - t_getpwent
+  - t_getpwnam_r
+  - ugid_functions
+- proccred (Chapter 9)
+  - idshow
+- time (Chapter 10)
+  - calendar_time
+  - curr_time
+  - process_time
+  - show_time
+  - strtime
+- syslim (Chapter 11)
+  - t_fpathconf
+  - t_sysconf
+- sysinfo (Chapter 12)
+  - procfs_pidmax
+  - procfs_user_exe
+  - t_uname
+
+- filebuff (Chapter 13)
+  - direct_read
+  - mix23io
+  - mix23_linebuff
+  - write_bytes
+- filesys (Chapter 14)
+  - t_mount
+  - t_statfs
+  - t_statvfs
+  - t_umount
+- files (Chapter 15)
+  - chiflag
+  - file_perms
+  - t_chown
+  - t_stat
+  - t_umask
+  - t_utime
+  - t_utimes
+- xattr (Chapter 16)
+  - t_setxattr
+  - xattr_view
+- acl (Chapter 17)
+  - acl_update
+  - acl_view
+- dirs_links (Chapter 18)
+  - bad_symlink
+  - file_type_stats
+  - list_files
+  - list_files_readdir_r
+  - nftw_dir_tree
+  - t_dirbasename
+  - t_unlink
+  - view_symlink
+- inotify (Chapter 19)
+  - demo_inotify
+  - dnotify
+  - inotify_dtree
+  - rand_dtree
+- signals (Chapter 20-22)
+  - catch_rtsigs
+  - demo_SIGFPE
+  - ignore_pending_sig
+  - intquit
+  - nonreentrant
+  - ouch
+  - siginterrupt
+  - sigmask_longjmp
+  - signal
+  - signalfd_sigval
+  - signal_functions
+  - sig_receiver
+  - sig_sender
+  - sig_speed_sigsuspend
+  - t_kill
+  - t_sigaltstack
+  - t_sigqueue
+  - t_sigsuspend
+  - t_sigwaitinfo
+- timers (Chapter 23)
+  - clock_times
+  - cpu_burner
+  - cpu_multi_burner
+  - cpu_multithread_burner
+  - demo_timerfd
+  - itimerspec_from_str
+  - ptmr_null_evp
+  - ptmr_sigev_signal
+  - ptmr_sigev_thread
+  - real_timer
+  - t_clock_nanosleep
+  - timed_read
+  - t_nanosleep
+- procexec (Chapter 24-28)
+  - acct_on
+  - acct_v3_view
+  - acct_view
+  - child_status
+  - closeonexec
+  - demo_clone
+  - envargs
+  - execlp
+  - exit_handlers
+  - footprint
+  - fork_file_sharing
+  - fork_sig_sync
+  - fork_stdio_buf
+  - fork_whos_on_first
+  - make_zombie
+  - multi_SIGCHLD
+  - multi_wait
+  - orphan
+  - pdeath_signal
+  - print_wait_status
+  - simple_system
+  - system
+  - t_clone
+  - t_execl
+  - t_execle
+  - t_execlp
+  - t_execve
+  - t_fork
+  - t_system
+  - t_vfork
+  - vfork_fd_test
+- threads (Chapter 29-33)
+  - detached_attrib
+  - one_time_init
+  - prod_condvar
+  - prod_no_condvar
+  - pthread_barrier_demo
+  - simple_thread
+  - strerror
+  - strerror_test
+  - strerror_tls
+  - strerror_tsd
+  - thread_cancel
+  - thread_cleanup
+  - thread_incr
+  - thread_incr_mutex
+  - thread_incr_rwlock
+  - thread_incr_spinlock
+  - thread_lock_speed
+  - thread_multijoin
+- pgsjc (Chapter 34)
+  - catch_SIGHUP
+  - disc_SIGHUP
+  - handling_SIGTSTP
+  - job_mon
+  - orphaned_pgrp_SIGHUP
+  - t_setsid
+- procpri (Chapter 35)
+  - demo_sched_fifo
+  - sched_set
+  - sched_view
+  - t_sched_getaffinity
+  - t_sched_setaffinity
+  - t_setpriority
+- procres (Chapter 36)
+  - print_rlimit
+  - print_rusage
+  - rlimit_nproc
+  - rusage
+  - rusage_wait
+- daemons (Chapter 37)
+  - become_daemon
+  - daemon_SIGHUP
+  - test_become_daemon
+  - t_syslog
+- cap (Chapter 39)
+  - cap_functions
+  - cap_launcher
+  - cap_text
+  - check_password_caps
+  - demo_file_caps
+  - show_secbits
+  - t_cap_get_file
+  - t_cap_get_pid
+  - t_cap_set_file
+  - view_cap_xattr
+- loginacct (Chapter 40)
+  - dump_utmpx
+  - utmpx_login
+  - view_lastlog
+- shlibs (Chapter 41)
+  - dynload
+  - mod1
+  - mod2
+  - mod3
+  - prog
+- pipes (Chapter 44)
+  - change_case
+  - fifo_seqnum_client
+  - fifo_seqnum_server
+  - pipe_ls_wc
+  - pipe_sync
+  - popen_glob
+  - simple_pipe
+- svipc (Chapter 45)
+  - svmsg_demo_server
+  - t_ftok
+- svmsg (Chapter 46)
+  - svmsg_chqbytes
+  - svmsg_create
+  - svmsg_file_client
+  - svmsg_file_server
+  - svmsg_info
+  - svmsg_ls
+  - svmsg_receive
+  - svmsg_rm
+  - svmsg_send
+- svsem (Chapter 47)
+  - binary_sems
+  - event_flags
+  - svsem_bad_init
+  - svsem_create
+  - svsem_demo
+  - svsem_good_init
+  - svsem_info
+  - svsem_mon
+  - svsem_op
+  - svsem_rm
+  - svsem_setall
+- svshm (Chapter 48)
+  - svshm_attach
+  - svshm_create
+  - svshm_info
+  - svshm_lock
+  - svshm_mon
+  - svshm_rm
+  - svshm_unlock
+  - svshm_xfr_reader
+  - svshm_xfr_writer
+- mmap (Chapter 49)
+  - anon_mmap
+  - mmcat
+  - mmcopy
+  - t_mmap
+  - t_remap_file_pages
+- vmem (Chapter 50)
+  - madvise_dontneed
+  - memlock
+  - t_mprotect
+- pmsg (Chapter 52)
+  - mq_notify_sig
+  - mq_notify_siginfo
+  - mq_notify_sigwaitinfo
+  - mq_notify_thread
+  - mq_notify_via_signal
+  - mq_notify_via_thread
+  - pmsg_create
+  - pmsg_getattr
+  - pmsg_receive
+  - pmsg_send
+  - pmsg_unlink
+- psem (Chapter 53)
+  - psem_create
+  - psem_getvalue
+  - psem_post
+  - psem_timedwait
+  - psem_trywait
+  - psem_unlink
+  - psem_wait
+  - thread_incr_psem
+- pshm (Chapter 54)
+  - pshm_create
+  - pshm_read
+  - pshm_unlink
+  - pshm_write
+- filelock (Chapter 55)
+  - create_pid_file
+  - i_fcntl_locking
+  - region_locking
+  - t_flock
+- sockets (Chapter 56)
+  - i6d_ucase_cl
+  - i6d_ucase_sv
+  - id_echo_cl
+  - id_echo_sv
+  - inet_sockets
+  - is_echo_cl
+  - is_echo_inetd_sv
+  - is_echo_sv
+  - is_echo_v2_sv
+  - is_seqnum_cl
+  - is_seqnum
+  - is_seqnum_sv
+  - is_seqnum_v2_cl
+  - is_seqnum_v2
+  - is_seqnum_v2_sv
+  - list_host_addresses
+  - rdwrn
+  - read_line_buf
+  - read_line
+  - scm_cred_recv
+  - scm_cred_send
+  - scm_functions
+  - scm_multi_recv
+  - scm_multi_send
+  - scm_rights_recv
+  - scm_rights_send
+  - sendfile
+  - socknames
+  - t_gethostbyname
+  - t_getservbyname
+  - ud_ucase_cl
+  - ud_ucase_sv
+  - unix_sockets
+  - us_abstract_bind
+  - us_xfr_cl
+  - us_xfr_sv
+  - us_xfr_v2_cl
+  - us_xfr_v2
+  - us_xfr_v2_sv
+- tty (Chapter 62)
+  - demo_SIGWINCH
+  - new_intr
+  - no_echo
+  - test_tty_functions
+  - tty_functions
+  - ttyname
+- altio (Chapter 63)
+  - demo_sigio
+  - epoll_flags_fork
+  - epoll_input
+  - multithread_epoll_wait
+  - poll_pipes
+  - select_mq
+  - self_pipe
+  - t_select
+- pty (Chapter 64)
+  - pty_fork
+  - pty_master_open_bsd
+  - pty_master_open
+  - script
+  - unbuffer
+- getopt (Appendix B)
+  - t_getopt
+
+In addition, the following supplementary code is included (relating
+to topics NOT covered in TLPI):
+
+- namespaces: Code examples for namespaces, mainly related to my LWN.net article series starting at https://lwn.net/Articles/531114/
+
+- seccomp: Code examples demonstrating the use of the seccomp (Secure Computing) facility.
+
+- vdso: Some example code relating to the VDSO (Virtual Dynamic Shared Object); see vdso(7)
